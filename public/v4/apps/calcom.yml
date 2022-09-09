@@ -17,6 +17,10 @@ services:
             DATABASE_URL: postgresql://$$cap_dbuser:$$cap_dbpass@srv-captain--$$cap_appname-db:5432/$$cap_dbname
         caproverExtra:
             containerHttpPort: "3000"
+        command:
+            - npx
+            - prisma
+            - studio
     # Database
     $$cap_appname-db:
         image: postgres:$$cap_postgres_version
