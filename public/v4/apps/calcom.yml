@@ -9,8 +9,9 @@ services:
         ports:
             - $$cap_prisma_studio_port:5555
         environment:
-            NEXT_PUBLIC_WEBAPP_URL: http://$$cap_appname.$$cap_root_domain
+            NEXT_PUBLIC_WEBAPP_URL: https://$$cap_appname.$$cap_root_domain
             NEXT_PUBLIC_LICENSE_CONSENT: $$cap_app_license
+            LICENSE: $$cap_app_license
             CALCOM_TELEMETRY_DISABLE: $$cap_next_telemetry_disabled
             NEXTAUTH_SECRET: $$cap_jwt_secret
             CALENDSO_ENCRYPTION_KEY: $$cap_calendso_encryption_key
@@ -90,7 +91,7 @@ caproverOneClickApp:
             The open-source Calendly alternative.
         end: >-
             Done! 😄
-            Your service is available at http://$$cap_appname.$$cap_root_domain
+            Your service is available at https://$$cap_appname.$$cap_root_domain
             Make sure to enable https on your domain
     displayName: "Cal.com"
     isOfficial: false
