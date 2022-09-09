@@ -42,6 +42,6 @@ jobs:
                 with:
                     branch: gh-pages
                     folder: dist
-                    git-config-name: SkayoBot
-                    git-config-email: frederike.gnampf@gmail.com
+                    git-config-name: ExtisOne
+                    git-config-email: info@extis.one
                     clean: true
