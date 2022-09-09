@@ -6,8 +6,6 @@ services:
         depends_on:
             - $$cap_appname-db
         restart: always
-        ports:
-            - $$cap_prisma_studio_port:5555
         environment:
             NEXT_PUBLIC_WEBAPP_URL: http://$$cap_appname.$$cap_root_domain
             NEXT_PUBLIC_LICENSE_CONSENT: $$cap_app_license
@@ -29,6 +27,23 @@ services:
             POSTGRES_PASSWORD: $$cap_dbpass
         caproverExtra:
             notExposeAsWebApp: "true"
+
+    $$cap_appname-studio:
+        image: calendso/calendso:$$cap_app_version
+        restart: always
+        networks:
+            - stack
+        ports:
+            - $$cap_prisma_studio_port:5555
+        env_file: .env
+        environment:
+          DATABASE_URL: postgresql://$$cap_dbuser:$$cap_dbpass@srv-captain--$$cap_appname-db:5432/$$cap_dbname
+        depends_on:
+          - $$cap_appname-db
+        command:
+          - npx
+          - prisma
+          - studio
 
 caproverOneClickApp:
     variables:
