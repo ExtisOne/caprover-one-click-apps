@@ -94,6 +94,6 @@ caproverOneClickApp:
             Your service is available at https://$$cap_appname.$$cap_root_domain
             Make sure to enable https on your domain
     displayName: "Cal.com"
-    isOfficial: false
+    isOfficial: true
     description: The open-source Calendly alternative. You are in control of your events and data.
     documentation: https://cal.com/
