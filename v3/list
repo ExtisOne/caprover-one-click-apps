@@ -1,1 +1,1 @@
-{"oneClickApps":[{"name":"calcom","displayName":"Cal.com","description":"The open-source Calendly alternative. You are in control of your events and data.","isOfficial":false,"logoUrl":"calcom.png"}]}
+{"oneClickApps":[{"name":"calcom","displayName":"Cal.com","description":"The open-source Calendly alternative. You are in control of your events and data.","isOfficial":true,"logoUrl":"calcom.png"},{"name":"uptime-kuma","displayName":"Uptime Kuma","description":"A fancy self-hosted monitoring tool","isOfficial":true,"logoUrl":"uptime-kuma.png"}]}
